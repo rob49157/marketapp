@@ -8,6 +8,7 @@ import Forex from "../src/components/Forex";
 import Stock from "../src/components/Stock";
 import Home from "../src/components/Home";
 
+
 import { Navbar, Container, Nav, Modal, Tab } from "react-bootstrap";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -16,9 +17,9 @@ function App() {
  
   return (
     <div className="App">
-      <Home/>
-     <Navbar bg="success" variant="dark">
-    <Container>
+     
+     <Navbar className="navbar" bg="success" variant="dark">
+    
     <Navbar.Brand href="#home">MarketList</Navbar.Brand>
     <Nav className="me-auto">
       <Nav.Link href="/" component={Home}>Home</Nav.Link>
@@ -30,9 +31,10 @@ function App() {
      
 
     </Nav>
-    </Container>
+    
   </Navbar>
-   
+  <Home/>
+ 
       
     </div>
   );

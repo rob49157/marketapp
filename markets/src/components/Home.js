@@ -1,5 +1,6 @@
 
 import { Navbar,Nav,Container,Div,Img} from "react-bootstrap";
+import '../../src/App.css'
 
 
 import Crypto from "../components/Crypto";
@@ -17,7 +18,7 @@ import {
   Link
 } from "react-router-dom";
 
-import '../components/'
+
 
 
 
@@ -29,16 +30,17 @@ const header = (props) => {
 }= props
 
   return (
+  
     <div class="container">
-    <h1 class="title">eFuse</h1>
-    <h1 class="title title-large">eFuse</h1>
-    <div id="img-1" class="img-container">   
+    <h1 class="title">Market app</h1>
+    
+    <div id="img-1" class="img-container third-animation">   
       <img class="img" src={cryptopic}/>
     </div>
-    <div id="img-1" class="img-container">   
+    <div id="img-2" class="img-container second-animation">   
       <img class="img" src={forexpic}/>
     </div>
-    <div id="img-1" class="img-container">   
+    <div id="img-3" class="img-container">   
       <img class="img" src={stockpic}/>
     </div>
     

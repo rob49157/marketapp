@@ -30,7 +30,8 @@ const header = (props) => {
 }= props
 
   return (
-  
+    <>
+    <link  classname='metalgear' href="https://blogfonts.com/css/aWQ9MzMxMDEmc3ViPTEwMSZjPW0mdHRmPU1FVEFHX19fLlRURiZuPW1ldGFsLWdlYXItNA/Metal Gear.ttf" rel="stylesheet" type="text/css"/>
     <div class="container">
     <h1 class="title">Market app</h1>
     
@@ -48,6 +49,7 @@ const header = (props) => {
   
  
 </div>
+</>
 
      
   

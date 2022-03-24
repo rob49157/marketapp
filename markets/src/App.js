@@ -18,9 +18,10 @@ function App() {
   return (
     <div className="App">
      
+     
      <Navbar className="navbar" bg="success" variant="dark">
     
-    <Navbar.Brand href="#home">MarketList</Navbar.Brand>
+    <Navbar.Brand Classname='metalgear' href="#home">MarketList</Navbar.Brand>
     <Nav className="me-auto">
       <Nav.Link href="/" component={Home}>Home</Nav.Link>
       <Nav.Link href="/Crypto" component={Crypto}>Crypto</Nav.Link>

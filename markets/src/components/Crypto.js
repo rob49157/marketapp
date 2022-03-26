@@ -4,22 +4,23 @@ import coingecko from "../Apis/coingecko";
 
 
  const Crypto= ()=>{
-     const [coins, setcoins]= useState([])
-     useEffect(()=>{
-         const fetchdata= async ()=>{
-            const response= await coingecko.get("/coins/markets",{
-                params:{
-                    vs_currency:"usd",
-                    ids:"bitcoin,rushmoon"
-                 }
-            })
+    //  const [coins, setcoins]= useState([])
+    //  useEffect(()=>{
+    //      const fetchdata= async ()=>{
+    //         const response= await coingecko.get("/coins/markets",{
+    //             params:{
+    //                 vs_currency:"usd",
+    //                 ids:"bitcoin,rushmoon"
+    //              }
+    //         })
            
-             console.log(response.data)
+    //          console.log(response.data)
 
-         }
-         fetchdata()
-     },[])
+    //      }
+    //      fetchdata()
+    //  },[])
      return <div>
+         <h1> hello</h1>
 
 
      </div>

@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import { BrowserRouter as Router, Switch, Route, Routes, BrowserRouter } from "react-router-dom";
 import React, { useState } from "react";
+import { ReactDOM } from "react-dom";
 import "./App.css";
 import Header from "./components/Home";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -49,6 +50,10 @@ function App() {
         </Routes>
       </Router>
 
+      
+      <Crypto />
+        
+      
       <Home />
 
 

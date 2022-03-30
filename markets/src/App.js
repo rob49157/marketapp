@@ -16,6 +16,11 @@ import { Navbar, Container, Nav, Modal, Tab } from "react-bootstrap";
 
 function App() {
 
+  
+
+    
+
+
 
   return (
     <div className="App">
@@ -51,7 +56,8 @@ function App() {
       </Router>
 
       
-      <Crypto />
+      <Crypto  />
+      
         
       
       <Home />

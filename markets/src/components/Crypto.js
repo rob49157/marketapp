@@ -29,7 +29,7 @@ export default function Crypto() {
 
   //create function to filter thru coins and display what users types in
 
-  // const filteredcoins = Coin.filter(coin => coin.name.toLowerCase().includes(search.toLowerCase()))
+  const filteredcoins = coins.filter(coin => coin.name.toLowerCase().includes(search.toLowerCase()))
 
 
 
@@ -48,6 +48,7 @@ export default function Crypto() {
             <p className="coin-volume">${volume.toLocaleString()}</p>
           </div>
         </div>
+        
       </div>
     );
   }; 
@@ -67,6 +68,19 @@ export default function Crypto() {
           ></input>
         </form>
       </div>
+      {filteredcoins.map(coin=> {
+          return(
+           <Coin key={coin.id}
+                  name={coin.name}
+                  image={coin.image}
+                  symbol={coin.symbol}
+                  volume={coin.market_cap}
+                  price={coin.current_price}
+           /> 
+             
+          
+          )
+        })}
     </div>
   );
 }

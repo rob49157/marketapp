@@ -47,8 +47,8 @@ function App() {
       </Navbar>
       <Router>
         <Routes>
-          <Route exact path="/" element={Home} />
-          <Route exact path="/Crypto" element={Crypto} />
+          <Route exact path="/" element={ <Home />} />
+          <Route exact path="/Crypto" element={<Crypto  />} />
           <Route exact path="/Stock" element={Stock} />
           <Route exact path="/Forex" element={Forex} />
 
@@ -56,11 +56,7 @@ function App() {
       </Router>
 
       
-      <Crypto  />
       
-        
-      
-      <Home />
 
 
     </div>

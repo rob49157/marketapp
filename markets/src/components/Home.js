@@ -22,12 +22,8 @@ import {
 
 
 
-const header = (props) => {
-    const{
-    Cryptoselected,setCryptoselected,
-    Stockselected, setStockselected,
-    Forexselected, setForexselected,
-}= props
+const header = () => {
+ 
 
   return (
     <>

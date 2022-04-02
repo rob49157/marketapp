@@ -9,6 +9,7 @@ import Crypto from "../src/components/Crypto";
 import Forex from "../src/components/Forex";
 import Stock from "../src/components/Stock";
 import Home from "../src/components/Home";
+import Calculator from "../src/components/Calculator"
 
 
 import { Navbar, Container, Nav, Modal, Tab } from "react-bootstrap";
@@ -54,6 +55,8 @@ function App() {
 
         </Routes>
       </Router>
+
+      
 
       
       

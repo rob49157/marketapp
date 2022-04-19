@@ -51,7 +51,7 @@ function App() {
           <Route exact path="/" element={ <Home />} />
           <Route exact path="/Crypto" element={<Crypto  />} />
           <Route exact path="/Stock" element={Stock} />
-          <Route exact path="/Forex" element={Forex} />
+          <Route exact path="/Forex" element={<Forex/>} />
 
         </Routes>
       </Router>

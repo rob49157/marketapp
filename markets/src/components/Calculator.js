@@ -20,7 +20,7 @@ export default function Calculator() {
         }
         // apply values
         setCalc = (calc + value)
-
+        // update result
         if(!ops.includes(value)){
             setResult(eval(calc +value).toString())
         }

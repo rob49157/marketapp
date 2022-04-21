@@ -44,7 +44,7 @@ export default function Crypto() {
             <p className="coin-symbol">{symbol}</p>
           </div>
           <div className="coin-data">
-            <p className="coin-price">${price}</p>
+            <p className="coin-price">${price.toLocaleString()}</p>
             <p className="coin-volume">${volume.toLocaleString()}</p>
             {pricechange < 0 ? (
               <p className="coin-percent red">{pricechange.toFixed(2)}%</p>

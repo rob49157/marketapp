@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
+import '../App.css'
 import axios from "axios";
 
 
@@ -28,7 +29,7 @@ export default function Forex() {
   return(
     <div>
       {forex.map((d)=>(
-        <h1 className="forex">{d.symbol}:{d.rate}</h1>
+        <h1 className="forex">USD/{d.symbol} : {d.rate}</h1>
       
         
       ))}

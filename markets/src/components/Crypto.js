@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import coingecko from "../Apis/coingecko";
 import { ReactDOM } from "react-dom";
 import axios from "axios";
-import "./crypto.css"
+import '../App.css'
 
 export default function Crypto() {
   const [coins, setCoins] = useState([]);

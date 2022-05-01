@@ -27,7 +27,7 @@ export default function Forex() {
   }
   
   return(
-    <div>
+    <div className="fxrates">
       {forex.map((d)=>(
         <h1 className="forex">USD/{d.symbol} : {d.rate}</h1>
       
@@ -36,26 +36,7 @@ export default function Forex() {
     </div>
   )
 
-  // useEffect(()=>{
-  //   axios.get("https://api.exchangerate.host/latest?base=USD")
-  //   .then((response)=>{
-  //     setForex(response.data.rates)
-  //     console.log(response.data)
 
-  //   })
-  //   .catch(error=>console.error(`Error:${error}`))
-
-  // },[])
-  
-
-  // return(
-  //   <div className="fxrates">
-  //     <h1>
-  //    {Object.keys(forex)}
-  //    </h1>
-     
-  //   </div>
-  // )
 
  
 

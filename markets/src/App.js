@@ -35,7 +35,7 @@ function App() {
 
       <Navbar className="navbar" bg="success" variant="dark">
 
-        <Navbar.Brand Classname='metalgear' href="#home">MarketList</Navbar.Brand>
+        <Navbar.Brand Classname='metalgear' href="/home" element={Home}>MarketList</Navbar.Brand>
         <Nav className="me-auto">
           <Nav.Link href="/" element={Home}>Home</Nav.Link>
           <Nav.Link href="/Crypto" element={Crypto}>Crypto</Nav.Link>

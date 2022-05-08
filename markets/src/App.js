@@ -6,7 +6,7 @@ import "./App.css";
 import Header from "./components/Home";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Crypto from "../src/components/Crypto";
-import Forex from "../src/components/Forex";
+import {Forex} from "../src/components/Forex";
 import Stock from "../src/components/Stock";
 import Home from "../src/components/Home";
 import Calculator from "../src/components/Calculator"

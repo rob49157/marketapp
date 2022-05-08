@@ -1,97 +1,102 @@
 import React, { useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
+import styles from '../App.module.css';
+import FxItem from "./Fxitems";
+ 
+import { searchFxRates } from "./services";
+import { fetchExchangeRates } from "./services";
 import '../App.css'
 import axios from "axios";
 
 
 
-export default function Forex() {
-  const [forex, setForex] = useState([]);
-  // state for searchbar
-  const [ratessearch, setRatessearch] = useState("");
+export  function Forex() {
+  const [rates, setRates] = React.useState(null);
+  const [ratesBase, setRatesBase] = React.useState('');
+  const [searchTerm, setSearchTerm] = React.useState('');
+  const [searchResults, setSearchResults] = React.useState(null);
 
-
-  useEffect(()=>{
-    getRates()
-  
-  },[])
-
-
-  const getRates = async (base) =>{
-    const res= await axios.get("https://api.exchangerate.host/latest?base=USD")
-    const { rates } = res.data
-    
-    const ratesTemp=[]
-    for(const[symbol,rate, ] of Object.entries(rates)){
-      ratesTemp.push({ symbol, rate })
-      
-    }
-    setForex(ratesTemp)
-   
-  }
-
-
-
-  const handlechangefx = (e) => {
-    setRatessearch(e.target.value);
+  const onSearch = (event) => {
+    setSearchTerm(event.target.value);
   };
 
-  //create function to filter thru coins and display what users types in
+  React.useEffect(() => {
+    let componentIsMounted = true;
 
-  const Filteredfx = forex.filter((fx) =>
-    fx.symbol.toLowerCase().includes(ratessearch.toLowerCase())
-  );
+    const getFxData = () => {
+      fetchExchangeRates()
+        .then((data) => {
+          console.log('fx data:', data);
+          if (componentIsMounted) {
+            setRates(data.rates);
+            setRatesBase(data.base);
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
 
- 
+    // load initially
+    getFxData();
 
+    const fetchInterval = setInterval(getFxData, 1000 * 60);
 
-  return(
-  
-    
-    
-    <div className="fxrates">
-      <div className="searchbarfx">
-        <form>
-          <input
-          type="text"
-          placeholder="Search forex"
-          onChange={handlechangefx}></input>
-        </form>
-      </div>
-      { Object.keys(ratessearch).map((key)=>
-      <Filteredfx
-      key={key.id}
-      symbol={key.symbol}/>)}
-     
+    return () => {
+      clearInterval(fetchInterval);
+      componentIsMounted = false;
+    };
+  }, []);
 
+  React.useEffect(() => {
+    if (searchTerm.trim().length > 0) {
+      setSearchResults(searchFxRates(rates, searchTerm));
+    } else {
+      setSearchResults(rates);
+    }
+  }, [searchTerm, rates]);
 
-
-      {forex.map((d)=>(
-        <h1 className="forex">{d.symbol}/USD : {d.rate}</h1>
-      
-        
-      ))}
+  return (
+    <div className={styles.app}>
+      <h1>Fx Rates</h1>
+      <input
+        value={searchTerm}
+        className={styles.input}
+        placeholder='Search...'
+        onChange={onSearch}
+      />
+      {searchResults
+        ? Object.keys(searchResults).map((key) => (
+            <FxItem
+              key={key}
+              fxSymbol={key}
+              fxRate={searchResults[key]}
+              ratesBase={ratesBase}
+            />
+          ))
+        : []}
     </div>
-  )
-
-
-
- 
-
-  
-  
-  
-  
-
-
-  }
- 
-
-  
+  );
+}
 
 
 
 
-      
-    
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

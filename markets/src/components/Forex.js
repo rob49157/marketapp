@@ -8,12 +8,13 @@ import axios from "axios";
 export default function Forex() {
   const [forex, setForex] = useState([]);
   // state for searchbar
-  const [ratessearch, setRatessearch] = useState(" ");
+  const [ratessearch, setRatessearch] = useState("");
 
 
   useEffect(()=>{
     getRates()
-  })
+  
+  },[])
 
 
   const getRates = async (base) =>{
@@ -26,29 +27,42 @@ export default function Forex() {
       
     }
     setForex(ratesTemp)
-    setRatessearch(ratesTemp)
+   
   }
 
 
+
+  const handlechangefx = (e) => {
+    setRatessearch(e.target.value);
+  };
+
+  //create function to filter thru coins and display what users types in
+
+  const Filteredfx = forex.filter((fx) =>
+    fx.symbol.toLowerCase().includes(ratessearch.toLowerCase())
+  );
 
  
 
 
   return(
+  
     
     
     <div className="fxrates">
-      {/* // searchbar */}
-      <input placeholder="Enter Forex"  type='text' onChange={event => setRatessearch(event.target.value)} />
+      <div className="searchbarfx">
+        <form>
+          <input
+          type="text"
+          placeholder="Search forex"
+          onChange={handlechangefx}></input>
+        </form>
+      </div>
+      { Object.keys(ratessearch).map((key)=>
+      <Filteredfx
+      key={key.id}
+      symbol={key.symbol}/>)}
      
-     {ratessearch.filter((s)=>{
-       if(ratessearch === " "){
-         return s
-       }else if(s.symbol.toLowerCase().includes(ratessearch.toLowerCase())){
-         return s
-       }
-       console.log(ratessearch)
-     })}
 
 
 

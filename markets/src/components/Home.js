@@ -4,7 +4,7 @@ import '../../src/App.css'
 
 
 import Crypto from "../components/Crypto";
-import Stock from "../components/Stock";
+
 import Forex from "../components/Forex";
 
 import cryptopic from '../images/crypto.jpg';

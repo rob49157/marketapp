@@ -7,7 +7,7 @@ import Header from "./components/Home";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Crypto from "../src/components/Crypto";
 import {Forex} from "../src/components/Forex";
-import Stock from "../src/components/Stock";
+import Fxconverter from "../src/components/Fxconverter";
 import Home from "../src/components/Home";
 import Calculator from "../src/components/Calculator"
 
@@ -39,7 +39,7 @@ function App() {
         <Nav className="me-auto">
           <Nav.Link href="/" element={Home}>Home</Nav.Link>
           <Nav.Link href="/Crypto" element={Crypto}>Crypto</Nav.Link>
-          <Nav.Link href="/Stock" element={Stock}>Stock</Nav.Link>
+          <Nav.Link href="/converter" element={Fxconverter}>Fxconverter</Nav.Link>
           <Nav.Link href="/Forex" element={Forex}>Forex</Nav.Link>
 
 
@@ -52,7 +52,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={ <Home />} />
           <Route exact path="/Crypto" element={<Crypto  />} />
-          <Route exact path="/Stock" element={Stock} />
+          <Route exact path="/Converter" element={<Fxconverter/>} />
           <Route exact path="/Forex" element={<Forex/>} />
 
         </Routes>

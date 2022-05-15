@@ -42,20 +42,38 @@ if(amountInFromCurrency){
       .catch((error) => console.log("error", error));
   }, []);
 
+
+  function handleFromAmountChange(e){
+    setAmount(e.target.value)
+    setAmountInFromCurrency(true)
+  }
+
+  function handleToAmountChange(e){
+    setAmount(e.target.value)
+    setAmountInFromCurrency(false)
+  }
+
  
 
   return (
-    <><h1>Convert</h1>
+    
+       <><h1 className="convert">Convert</h1>
     <Currencyrow 
     currencyOptions={currencyOptions}
     selectedCurrency={fromCurrency}
-    amount={toamount}/>
+    onchangeCurrency={e=>setFromCurrency(e.target.value)}
+    onChangeAmount={handleFromAmountChange}
+    amount={fromamount}/>
     
-    =
+    <div className="equals"> To</div>
     <Currencyrow 
     currencyOptions={currencyOptions}
     selectedCurrency={toCurrency}
-    amount={fromamount}/>
+    onchangeCurrency={e=>setFromCurrency(e.target.value)}
+    onChangeAmount={handleToAmountChange}
+    amount={toamount}/>
     </>
+   
+    
   );
 }

@@ -1,10 +1,23 @@
 import React, { useEffect, useState } from "react";
 import "../App.css";
+import Currencyrow from "./fxconverterimport";
 
 export default function Fxconverter() {
-  const [currencyoptions, setCurrencyoptions] = useState([]);
-  const [fromcurrency, setFromcurrency] = useState();
-  const [toCurrency, settoCurrency] = useState();
+  const [currencyOptions, setCurrencyOptions] = useState([]);
+  const [fromCurrency, setFromCurrency] = useState();
+  const [toCurrency, setToCurrency] = useState();
+  const [exchangeRate, setExchangerate] =useState();
+  const [amount,setAmount]=useState(1)
+  const [amountInFromCurrency,setAmountInFromCurrency]=useState(true)
+  
+let toamount, fromamount
+if(amountInFromCurrency){
+  fromamount = amount
+  toamount= amount * exchangeRate
+}else{
+  toamount= amount
+  fromamount= amount / exchangeRate
+}
 
   useEffect(() => {
     var myHeaders = new Headers();
@@ -20,23 +33,29 @@ export default function Fxconverter() {
       .then((response) => response.json())
       .then((data) => {
         const firstcurrency = Object.keys(data.rates)[0];
-        setCurrencyoptions([data.base, ...Object.keys(data.rates)]);
-        setFromcurrency(data.base);
-        settoCurrency(firstcurrency);
+        setCurrencyOptions([data.base, ...Object.keys(data.rates)]);
+        setFromCurrency(data.base);
+        setToCurrency(firstcurrency);
+        setExchangerate(data.rates[firstcurrency])
       })
+
       .catch((error) => console.log("error", error));
   }, []);
 
-  <Fxconverter currencyoptions={currencyoptions} />;
+ 
 
   return (
-    <div className="body">
-      <input type="number" className="input" />
-      <select className="select">
-        {currencyoptions.map((option) => (
-          <option value={option}>{option}</option>
-        ))}
-      </select>
-    </div>
+    <><h1>Convert</h1>
+    <Currencyrow 
+    currencyOptions={currencyOptions}
+    selectedCurrency={fromCurrency}
+    amount={toamount}/>
+    
+    =
+    <Currencyrow 
+    currencyOptions={currencyOptions}
+    selectedCurrency={toCurrency}
+    amount={fromamount}/>
+    </>
   );
 }

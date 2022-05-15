@@ -47,6 +47,8 @@ function App() {
 
         </Nav>
 
+        
+
       </Navbar>
       <Router>
         <Routes>
@@ -57,6 +59,8 @@ function App() {
 
         </Routes>
       </Router>
+    
+     
 
 
       

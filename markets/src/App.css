@@ -106,17 +106,22 @@
 
   /* FXCONVERTER */
  .body{ 
-  margin: 0;
+   margin-left: 100px;
+   margin-right: 100px;
+  /* margin: 0; */
   display: flex;
   justify-content: center;
   align-items:center;
   min-height: 40vh;
   border-color: #212121;
   text-align: center;
-  border-style: dashed;
-  border-width: 30px;
+  border-style: double;
+  border-width: 10px;
   border-color: #73AD21;
   border-radius: 30%;
+  box-shadow: 3px 3px #333
+
+
   
   
   ;
@@ -287,10 +292,17 @@
       display: none;
     }
   }
+
+/* iphone12 */
   @media only screen and ( min-device-width: 390px) and  (max-width:884px){
     .equals{
       
       margin-left: 200px;
       
+            
+    }
+    .body{
+      margin-right: 10px;
+      margin-left: 10px;
     }
   }

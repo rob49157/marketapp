@@ -19,9 +19,12 @@ if(amountInFromCurrency){
   fromamount= amount / exchangeRate
 }
 
+// nuNcYLSaKeu2ev1LpHonXDzGY2P8iVXV
+// OO3LQyjtTLlIJsljTTnLetLHgKHXv6R0
+
   useEffect(() => {
     var myHeaders = new Headers();
-    myHeaders.append("apikey", "OO3LQyjtTLlIJsljTTnLetLHgKHXv6R0");
+    myHeaders.append("apikey", "nuNcYLSaKeu2ev1LpHonXDzGY2P8iVXV");
 
     var requestOptions = {
       method: "GET",

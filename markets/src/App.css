@@ -314,6 +314,9 @@ body {
   }
   .coin-row{
    position: absolute;
+   border-color: #73AD21;
+   width: 200px;
+   
   
    top: 12;
    
@@ -324,7 +327,8 @@ body {
     position: absolute;
    top: 100px;
    padding-top: 10px;
-   left:12px;
+   left:15px;
+   
     
   }
   .coin-marketcap{
@@ -347,6 +351,7 @@ body {
   .coin-price{
     position: absolute;
    top: -25px;
+   padding-top: 5px;
    
    left:10px;
 

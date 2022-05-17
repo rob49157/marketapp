@@ -44,14 +44,14 @@ export default function Crypto() {
             <p className="coin-symbol">{symbol}</p>
           </div>
           <div className="coin-data">
-            <p className="coin-price">${price.toLocaleString()}</p>
-            <p className="coin-volume">${volume.toLocaleString()}</p>
+            <p className="coin-price"> Price${price.toLocaleString()}</p>
+            <p className="coin-volume"> V:${volume.toLocaleString()}</p>
             {pricechange < 0 ? (
               <p className="coin-percent red">{pricechange.toFixed(2)}%</p>
             ) : (
               <p className="coin-percent green">{pricechange.toFixed(2)}%</p>
             )}
-            <p className=" coin-marketcap"> Market cap :$ {marketcap.toLocaleString()}</p>
+            <p className=" coin-marketcap"> MC :$ {marketcap.toLocaleString()}</p>
           </div>
         </div>
       </div>

@@ -1,82 +1,77 @@
-
-
-
-
-
 * {
-    padding: 0px;
-    margin: 0px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   
-  }
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
 
 
-  
-  body {
-    background-color: #212121;
-    font-family: Verdana, Geneva, sans-serif;
-  }
-  
-  .container {
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    text-align: center;
-    overflow: hidden;
-  }
-  
-  .title {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    z-index: -1;
-    color: #ECEFF1;
-    font-size: 120px;
-    font-weight: 600;
-  }
-  
 
-  .img-container {
-    display: inline-block;
-    overflow: hidden;
-    margin-left: -2.8px;
-    margin-right: -2.8px;
-    width: 170px;
-    vertical-align: top;
-    border-radius: 0px 0px 80px 80px;
-    animation-name: flow;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-delay: -2s;
-    transition-timing-function: cubic-bezier(0,.57,1,.46);
-    box-shadow: 2px 2px 16px 2px rgba(0,0,0,0.5);
-  }
-  
-  .second-animation {
-    animation-delay: -1.5s;
-  }
-  
-  .third-animation {
-    animation-delay: -1s; 
-  }
-  
- 
-  
-  .img {
-    object-fit: cover;
-    width: 170px;
-    height: 100vh;
-    margin-top: -60px;
-  }
-  
-  .metalgear{
-    font-family: 'metal-gear-4', sans-serif;
-  }
+body {
+  background-color: #212121;
+  font-family: Verdana, Geneva, sans-serif;
+}
 
-  /* //forex */
+.container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
 
-  /* .fxrates{
+.title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  color: #ECEFF1;
+  font-size: 120px;
+  font-weight: 600;
+}
+
+
+.img-container {
+  display: inline-block;
+  overflow: hidden;
+  margin-left: -2.8px;
+  margin-right: -2.8px;
+  width: 170px;
+  vertical-align: top;
+  border-radius: 0px 0px 80px 80px;
+  animation-name: flow;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay: -2s;
+  transition-timing-function: cubic-bezier(0, .57, 1, .46);
+  box-shadow: 2px 2px 16px 2px rgba(0, 0, 0, 0.5);
+}
+
+.second-animation {
+  animation-delay: -1.5s;
+}
+
+.third-animation {
+  animation-delay: -1s;
+}
+
+
+
+.img {
+  object-fit: cover;
+  width: 170px;
+  height: 100vh;
+  margin-top: -60px;
+}
+
+.metalgear {
+  font-family: 'metal-gear-4', sans-serif;
+}
+
+/* //forex */
+
+/* .fxrates{
     
   font-size: 24px;
   margin: 25px;
@@ -84,34 +79,34 @@
   height: 200px;
 
   /* Setup */
-  /* position: relative;
-} */ 
-    
-  
- .forex{  
+/* position: relative;
+} */
+
+
+.forex {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   justify-content: start;
-  
+
   align-items: center;
   height: 150px;
   border-bottom: 1px solid black;
   width: 400;
   margin: 100px;
- 
-  
+
+
   margin-top: 100px;
- }
+}
 
 
-  /* FXCONVERTER */
- .body{ 
-   margin-left: 100px;
-   margin-right: 100px;
+/* FXCONVERTER */
+.body {
+  margin-left: 100px;
+  margin-right: 100px;
   /* margin: 0; */
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   min-height: 40vh;
   border-color: #212121;
   text-align: center;
@@ -119,63 +114,58 @@
   border-width: 10px;
   border-color: #73AD21;
   border-radius: 30%;
-  box-shadow: 3px 3px #333
-
-
-  
-  
-  ;
+  box-shadow: 3px 3px #333;
 
 
 
-} 
+}
 
-.input{
+.input {
   border: 1px solid #333;
   border-radius: .3em;
-  padding: .25rem ;
+  padding: .25rem;
   width: 20em;
 }
 
-.select{
+.select {
   margin-left: .5rem;
 }
 
-.equals{
+.equals {
   font-weight: bold;
   font-size: 2rem;
   margin-left: 1000px;
 
 }
 
-.convert{
+.convert {
   text-align: center;
 }
 
 
 
-  
-  
- 
-
- 
- 
-
- 
-
- /* CRYPTO */
 
 
- .Crypto{
+
+
+
+
+
+
+
+/* CRYPTO */
+
+
+.Crypto {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
-  
- 
+
+
 }
 
-.coin-search{
+.coin-search {
   margin-bottom: 64px;
   display: flex;
   flex-direction: column;
@@ -183,33 +173,33 @@
   align-items: center;
 }
 
-.coin-text{
+.coin-text {
   margin-bottom: 32px;
   text-align: center;
 }
 
-.coint-input{
- 
+.coint-input {
+
   border-radius: 25px;
   background: #73AD21;
   padding: 20px;
   width: 200px;
   height: 150px;
-  
+
 }
 
 
 
 
 
-.coin-container{
+.coin-container {
   display: flex;
   justify-content: center;
 }
 
-.coin-row{
+.coin-row {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   justify-content: start;
   align-items: center;
   height: 150px;
@@ -217,28 +207,30 @@
   width: 900px
 }
 
-.coin{
+.coin {
   display: flex;
   align-items: center;
   padding-right: 24px;
   min-width: 300px;
 }
 
-.coin h1{
+.coin h1 {
   font-size: 16px;
   width: 150px;
 }
-.coin img{
+
+.coin img {
   height: 30px;
   width: 30px;
-  margin-right:10px;
+  margin-right: 10px;
 }
 
-.coin-symbol{
+.coin-symbol {
   text-transform: uppercase;
 
 }
-.coin-data{
+
+.coin-data {
   display: flex;
   text-align: center;
   justify-content: space-between;
@@ -246,63 +238,133 @@
 
 }
 
-.coin-price{
+.coin-price {
   width: 110px;
 
 }
-.coin-volume{
+
+.coin-volume {
   width: 155px;
 }
 
-.coin-marketcap{
+.coin-marketcap {
   width: 230px;
 }
 
-.coin-percent{
+.coin-percent {
   width: 100px;
 }
 
-.red{
+.red {
   color: red;
 }
 
-.green{
+.green {
   color: rgb(72, 206, 72);
 }
-  @keyframes flow {
-    0% {height: 20%; border-radius: 0px 0px 30px 30px;}
-    50% {height: 90%; border-radius: 0px 0px 100px 100px;}
-    100% {height: 20%; border-radius: 0px 0px 30px 30px;}
-  }
-  
-  @media only screen and (max-width: 1200px) {
-    #img-7 {
-      display: none;
-    }
-  }
-  
-  @media only screen and (max-width: 1028px) {
-    #img-1 {
-      display: none;
-    }
-  }
-  
-  @media only screen and (max-width: 860px) {
-    #img-6 {
-      display: none;
-    }
+
+@keyframes flow {
+  0% {
+    height: 20%;
+    border-radius: 0px 0px 30px 30px;
   }
 
-/* iphone12 */
-  @media only screen and ( min-device-width: 390px) and  (max-width:884px){
-    .equals{
-      
-      margin-left: 200px;
-      
-            
-    }
-    .body{
-      margin-right: 10px;
-      margin-left: 10px;
-    }
+  50% {
+    height: 90%;
+    border-radius: 0px 0px 100px 100px;
   }
+
+  100% {
+    height: 20%;
+    border-radius: 0px 0px 30px 30px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #img-7 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1028px) {
+  #img-1 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  #img-6 {
+    display: none;
+  }
+}
+
+/* iphone12 */
+@media only screen and (min-device-width: 390px) and (max-width:884px) {
+  .equals {
+   margin-left: 200px;
+  }
+
+  .body {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .coin-container{
+    margin:50px
+  }
+  .coin-row{
+   position: absolute;
+  
+   top: 12;
+   
+   left:0;
+  
+  }
+  .coin-data{
+    position: absolute;
+   top: 100px;
+   padding-top: 10px;
+   left:12px;
+    
+  }
+  .coin-marketcap{
+    position: absolute;
+    top: -15px;
+   
+    padding-top: 10px;
+    
+     left:-15px;
+   
+
+  }
+  .coin-percent{
+    position: absolute;
+   top: 25px;
+   
+   left:10px;
+    
+  }
+  .coin-price{
+    position: absolute;
+   top: -25px;
+   
+   left:10px;
+
+  }
+ 
+
+   
+
+
+  .Crypto{
+    position:absolute;
+    /* margin-right: 100000px; */
+    margin-right: 100%;
+   
+    /* padding-right: 50px; */
+    padding-left: 10px;
+    
+/*     
+    margin-top: 10px; */
+  }
+}

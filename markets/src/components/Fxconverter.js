@@ -45,6 +45,23 @@ if(amountInFromCurrency){
       .catch((error) => console.log("error", error));
   }, []);
 
+  useEffect(()=>{  var myHeaders = new Headers();
+    myHeaders.append("apikey", "nuNcYLSaKeu2ev1LpHonXDzGY2P8iVXV");
+
+    var requestOptions = {
+      method: "GET",
+      redirect: "follow",
+      headers: myHeaders,
+    };
+
+    
+    if(fromCurrency !=null && toCurrency != null){
+      fetch(`https://api.apilayer.com/exchangerates_data/latest?base=${fromCurrency}&symbols=${toCurrency}`, requestOptions)
+      
+      .then(data=>setExchangerate(data.rates[toCurrency]))      
+    }
+  },[fromCurrency,toCurrency])
+
 
   function handleFromAmountChange(e){
     setAmount(e.target.value)

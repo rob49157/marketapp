@@ -305,29 +305,33 @@ body {
   }
 
   .body {
+    
     margin-right: 10px;
     margin-left: 10px;
   }
 
   .coin-container{
-    margin:50px
+    
+    margin:50px;
+    margin-bottom: 20%;
+    margin-top: 10%;
+    
   }
   .coin-row{
    position: absolute;
    border-color: #73AD21;
-   width: 200px;
-   
+   width: 85%;
+   /* top:10; */
   
-   top: 12;
    
-   left:0;
   
   }
   .coin-data{
-    position: absolute;
+  position: absolute;
    top: 100px;
    padding-top: 10px;
    left:15px;
+  
    
     
   }
@@ -338,38 +342,33 @@ body {
     padding-top: 10px;
     
      left:-15px;
+     color: white;
    
 
   }
-  .coin-percent{
+  /* .coin-percent{
     position: absolute;
    top: 25px;
    
    left:10px;
     
-  }
-  .coin-price{
-    position: absolute;
-   top: -25px;
-   padding-top: 5px;
-   
-   left:10px;
+  } */
 
-  }
  
 
    
 
 
   .Crypto{
-    position:absolute;
-    /* margin-right: 100000px; */
-    margin-right: 100%;
+    
+    
    
-    /* padding-right: 50px; */
+    width: 100%;
+   
+   
     padding-left: 10px;
     
-/*     
-    margin-top: 10px; */
+   
+   
   }
 }

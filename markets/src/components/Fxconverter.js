@@ -19,6 +19,7 @@ if(amountInFromCurrency){
   fromamount= amount / exchangeRate
 }
 
+//keys
 // nuNcYLSaKeu2ev1LpHonXDzGY2P8iVXV
 // OO3LQyjtTLlIJsljTTnLetLHgKHXv6R0
 
@@ -89,7 +90,7 @@ if(amountInFromCurrency){
     <Currencyrow 
     currencyOptions={currencyOptions}
     selectedCurrency={toCurrency}
-    onchangeCurrency={e=>setFromCurrency(e.target.value)}
+    onchangeCurrency={e=>setToCurrency(e.target.value)}
     onChangeAmount={handleToAmountChange}
     amount={toamount}/>
     </>

@@ -35,9 +35,9 @@ function App() {
 
       <Navbar className="navbar" bg="success" variant="dark">
 
-        <Navbar.Brand Classname='metalgear' href="/home" element={Home}>MarketList</Navbar.Brand>
+        <Navbar.Brand Classname='metalgear' href="/" element={Home}>MarketList</Navbar.Brand>
         <Nav className="me-auto">
-          <Nav.Link href="/" element={Home}>Home</Nav.Link>
+          
           <Nav.Link href="/Crypto" element={Crypto}>Crypto</Nav.Link>
           <Nav.Link href="/converter" element={Fxconverter}>Fxconverter</Nav.Link>
           <Nav.Link href="/Forex" element={Forex}>Forex</Nav.Link>
@@ -50,7 +50,9 @@ function App() {
         
 
       </Navbar>
-      <Router>
+
+
+      <BrowserRouter basename="/" >
         <Routes>
           <Route exact path="/" element={ <Home />} />
           <Route exact path="/Crypto" element={<Crypto  />} />
@@ -58,7 +60,7 @@ function App() {
           <Route exact path="/Forex" element={<Forex/>} />
 
         </Routes>
-      </Router>
+      </BrowserRouter>
     
      
 

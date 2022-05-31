@@ -40,7 +40,7 @@ function App() {
           
           <Nav.Link href="/marketapp/Crypto" element={Crypto}>Crypto</Nav.Link>
           <Nav.Link href="/marketapp/Forex" element={Forex}>Forex</Nav.Link>
-          <Nav.Link href="/marketapp/converter" element={Fxconverter}>Fxconverter</Nav.Link>
+          <Nav.Link href="/marketapp/Converter" element={Fxconverter}>Fxconverter</Nav.Link>
 
 
 

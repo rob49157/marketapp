@@ -35,7 +35,7 @@ function App() {
 
       <Navbar className="navbar" bg="success" variant="dark">
 
-        <Navbar.Brand Classname='metalgear' href="/marketapp" element={Home}>MarketList</Navbar.Brand>
+        <Navbar.Brand Classname='metalgear' href="/marketapp/" element={Home}>MarketList</Navbar.Brand>
         <Nav className="me-auto">
           
           <Nav.Link href="/marketapp/Crypto" element={Crypto}>Crypto</Nav.Link>
@@ -52,7 +52,7 @@ function App() {
       </Navbar>
 
 
-      <BrowserRouter basename="/marketapp" >
+      <BrowserRouter basename='/marketapp' >
         <Routes>
           <Route exact path="/" element={ <Home />} />
           <Route exact path="/Crypto" element={<Crypto  />} />
